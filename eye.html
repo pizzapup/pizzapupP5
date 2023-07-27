@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  </head>
+  <body>
+    <a href="./index.html">Gross, take me back to the cute animals (home)</a>
+
+    <!-- <script>
+      class Eye {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+          this.blinking = false;
+          this.eyeColor = color(0);
+        }
+
+        draw() {
+          const centerX = this.x;
+          const centerY = this.y;
+
+          // Eye white
+          fill(255);
+          ellipse(centerX, centerY, 30, 30);
+
+          // Calculate the angle between the eye center and the mouse position
+          const angle = atan2(mouseY - centerY, mouseX - centerX);
+
+          // Calculate the pupil position based on the angle and distance from the center
+          const pupilRadius = 5;
+          const pupilX = centerX + cos(angle) * 8;
+          const pupilY = centerY + sin(angle) * 8;
+
+          // Eye pupil
+          fill(this.eyeColor);
+          ellipse(pupilX, pupilY, pupilRadius * 2, pupilRadius * 2);
+        }
+
+        blink() {
+          if (this.blinking) {
+            this.eyeColor = color("red");
+          } else {
+            this.eyeColor = color(0);
+          }
+        }
+
+        checkMouseHover() {
+          const distance = dist(mouseX, mouseY, this.x, this.y);
+          if (distance < 15) {
+            this.blinking = true;
+          } else {
+            this.blinking = false;
+          }
+        }
+      }
+
+      let eye;
+
+      function setup() {
+        createCanvas(400, 400);
+        eye = new Eye(200, 200);
+      }
+
+      function draw() {
+        background(220);
+        eye.checkMouseHover();
+        eye.blink();
+        eye.draw();
+      }
+    </script> -->
+    <script src="js/eye.js"></script>
+  </body>
+</html>
